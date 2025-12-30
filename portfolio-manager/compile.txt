@@ -1,0 +1,27 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------< org.ozsoft.portfoliomanager:portfolio-manager >------------
+[INFO] Building portfolio-manager 0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ portfolio-manager ---
+[INFO] Deleting c:\Users\ERS1399\Downloads\Full-Stack-Dev\portfolio-manager-repo\portfolio-manager\target
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ portfolio-manager ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ portfolio-manager ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 68 source files to c:\Users\ERS1399\Downloads\Full-Stack-Dev\portfolio-manager-repo\portfolio-manager\target\classes
+[INFO] /c:/Users/ERS1399/Downloads/Full-Stack-Dev/portfolio-manager-repo/portfolio-manager/src/main/java/org/ozsoft/portfoliomanager/services/UpdateService.java: Some input files use or override a deprecated API.
+[INFO] /c:/Users/ERS1399/Downloads/Full-Stack-Dev/portfolio-manager-repo/portfolio-manager/src/main/java/org/ozsoft/portfoliomanager/services/UpdateService.java: Recompile with -Xlint:deprecation for details.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.792 s
+[INFO] Finished at: 2025-12-23T12:46:42+05:30
+[INFO] ------------------------------------------------------------------------

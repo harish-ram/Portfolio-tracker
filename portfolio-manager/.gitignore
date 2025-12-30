@@ -1,0 +1,10 @@
+.project
+.classpath
+/.settings/
+/target/
+/data/
+/log/
+
+# Properties files with sensitive information
+src/main/resources/application.properties
+src/main/resources/application-*.properties

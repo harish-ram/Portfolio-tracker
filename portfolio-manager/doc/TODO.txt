@@ -1,0 +1,15 @@
+Portfolio Manager - TODO
+========================
+
+* Stock price graphs
+* Portfolio result graphs
+* View application log
+* Configuration dialog
+* Alert log
+* View alerts (since last day)
+* Task progress indicator
+* Extend stock analysis score formula (CR, YDG, CY, DGR)
+* Update stock analysis (all stocks) and show scores
+* View income overview ('Income' tab)
+* Set/view sector and industry per stock
+* View portfolio diversification (per sector/stock)

@@ -654,6 +654,44 @@ git push origin feature/your-feature
 
 ---
 
+## Railway Deployment
+
+The application is optimized for deployment on Railway using a single service that packages both the React frontend and Spring Boot backend.
+
+### 1. Preparation
+
+Ensure your changes are pushed to GitHub. The repository includes:
+- `nixpacks.toml`: Configuration for the Railway builder.
+- `railway.json`: Service-specific settings.
+- `.github/workflows/build.yml`: CI verification.
+
+### 2. Deployment Steps
+
+1.  **Create New Project**: Log in to [Railway](https://railway.app/) and click "New Project" -> "Deploy from GitHub repo".
+2.  **Configure Variables**:
+    -   `PORT`: Automatically set by Railway, but defaults to `8080`.
+    -   `MARKETSTACK_API_KEY`: Get your key from [Marketstack](https://marketstack.com/).
+    -   `GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`: For OAuth support.
+3.  **Build Phase**: Railway will use Nixpacks to:
+    -   Install Node.js and Maven.
+    -   Build the React frontend (`npm run build`).
+    -   Package the Spring Boot application with the frontend assets embedded in the JAR.
+4.  **Networking**: Railway will provide a public URL. Ensure this URL is added to your Google OAuth Authorized Redirect URIs.
+
+### 3. CI/CD Pipeline
+
+Every push to the `main` or `develop` branches will trigger:
+1.  **GitHub Actions**: Build verification and Playwright tests.
+2.  **Railway Deployment**: Automatic redeployment upon successful build detection.
+
+### 4. Database Persistence
+
+By default, the application uses H2 file-based storage. On Railway, file-based storage is **ephemeral**.
+-   **Recommendation**: Connect a PostgreSQL database for production persistence.
+-   **Configuration**: Add `SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME`, and `SPRING_DATASOURCE_PASSWORD` to your Railway variables.
+
+---
+
 ## Support & Resources
 
 - **Java Docs** - [docs.oracle.com](https://docs.oracle.com)

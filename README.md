@@ -44,7 +44,21 @@ Navigate to `http://localhost:5173`
 
 For detailed setup instructions, see [SETUP.md](SETUP.md).
 
-## 📋 Tech Stack
+## 🚀 Deployment
+
+The application is configured for **Railway** with a unified CI/CD pipeline.
+
+### Deployment Steps:
+1. **Push** your changes to GitHub.
+2. **Connect** your repository to [Railway](https://railway.app/).
+3. **Environment Variables**: Add the following in Railway:
+   - `GOOGLE_CLIENT_ID` (Optional)
+   - `GOOGLE_CLIENT_SECRET` (Optional)
+   - `MARKETSTACK_API_KEY` (Required for live prices)
+4. **OAuth Redirect**: Add `https://your-app.railway.app/login/oauth2/code/google` to Google Cloud Console.
+
+### Unified Build
+The project uses `frontend-maven-plugin` to build the React frontend and package it inside the Spring Boot JAR automatically during the Maven package phase.
 
 ### Backend
 | Component | Technology |

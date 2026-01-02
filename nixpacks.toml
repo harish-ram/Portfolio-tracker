@@ -1,0 +1,10 @@
+[phases.setup]
+nixPkgs = ["jdk8", "maven", "nodejs-18_x"]
+
+[phases.build]
+dependsOn = ["setup"]
+installCommand = "cd portfolio-manager && mvn install -DskipTests"
+buildCommand = "cd portfolio-manager && mvn package -DskipTests"
+
+[start]
+command = "java -jar portfolio-manager/target/portfolio-manager.jar"
